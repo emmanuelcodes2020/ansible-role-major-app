@@ -1,0 +1,17 @@
+---
+- name: Execute a command in the tmp directory
+  command:
+    cmd: wget https://wordpress.org/latest.tar.gz
+    chdir: "{{ major_app_tmp_file }}"
+  become: true
+
+- name: Extract the WordPress archive in /tmp
+  ansible.builtin.command:
+    cmd: tar -xzf /tmp/latest.tar.gz -C /tmp/
+  become: true
+
+- name: Move WordPress to /var/www/html
+  ansible.builtin.command:
+    cmd: mv /tmp/wordpress/ /var/www/html/
+  become: true
+

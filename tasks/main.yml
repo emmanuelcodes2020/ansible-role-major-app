@@ -1,0 +1,4 @@
+---
+# tasks file for major-app-role
+  - name: Execute a command in the tmp directory
+    include_tasks: prepare.yml

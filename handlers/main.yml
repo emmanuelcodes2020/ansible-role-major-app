@@ -1,0 +1,11 @@
+---
+# handlers file for major-app-role
+- name: Restart httpd server
+  service:
+    name: httpd
+    state: restarted
+
+- name: Restart MariaDB server
+  service:
+    name: mariadb
+    state: restarted

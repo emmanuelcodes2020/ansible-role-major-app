@@ -1,0 +1,6 @@
+---
+# defaults file for major-app-role
+major_wordpress_file: wordpress/  
+major_app_dest_dir : /var/www/html
+major_app_tmp_file : /tmp
+major_app_zip : /tmp/latest.tar.gz
